@@ -3,10 +3,19 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useEffect } from "react";
-
+import { useWeb3React } from "@web3-react/core";
 
 
 export default function Home() {
+  const {
+    activate,
+    active,
+    deativate,
+    error,
+    account,
+    chainId
+  } = useWeb3React();
+
   useEffect(() => {
 
   })
@@ -14,7 +23,7 @@ export default function Home() {
   const connect = () => {
 
   }
-  
+
   const disconnect = () => {
     
   }
