@@ -1,12 +1,14 @@
 import "@/styles/globals.css";
 import { getLibrary } from "../config/web3";
-import { Web3BaseProvider } from "@web3-react/core";
+import { Web3ReactProvider } from "@web3-react/core";
 
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
-  <Web3BaseProvider getLibrary={getLibrary}>
-    <Component> ( ...pageProps)</Component>
-  </Web3BaseProvider>
+  <Web3ReactProvider getLibrary={getLibrary}>
+    <Component {...pageProps} />
+  </Web3ReactProvider>
   )
 }
+
+export default App;
